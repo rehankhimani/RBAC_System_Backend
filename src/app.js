@@ -5,6 +5,7 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
+console.log("MYSQLHOST:", process.env.MYSQLHOST);
 
 app.use("/api", require("./routes/authRoutes"));
 app.use("/api/users", require("./routes/userRoutes")); 
